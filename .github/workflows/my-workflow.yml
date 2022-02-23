@@ -1,6 +1,6 @@
 name: JS Actions
 
-on:
+on: push
   pull_request:
     types: [labeled]
 
