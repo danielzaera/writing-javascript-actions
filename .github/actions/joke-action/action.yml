@@ -1,4 +1,5 @@
 name: "external API action"
+on: [push]
 
 description: "use an external API to retrieve and display a joke"
 
