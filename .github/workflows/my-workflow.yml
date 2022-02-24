@@ -1,18 +1,27 @@
 name: JS Actions
 
-on: push
+on: 
+  push:
   pull_request:
     types: [labeled]
 
 jobs:
-  action:
+
+  hello-world:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      
       - name: hello-action
         uses: ./.github/actions/hello-world
+        
+  joke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
 
       - name: ha-ha
-        uses: ./.github/actions/joke-action
+        uses: ./.github/actions/joke-action        
