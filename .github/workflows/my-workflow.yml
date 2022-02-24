@@ -16,6 +16,10 @@ jobs:
       
       - name: hello-action
         uses: ./.github/actions/hello-world
+        with:
+          first-greeting: Daniel
+          second-greeting: Luis
+          third-greeting: Rita
         
   joke:
     runs-on: ubuntu-latest
